@@ -39,6 +39,7 @@ h2 {
     font-size: 1.5em;
     color: #0a0c0c;
     opacity: 1;
+    transition: all .3s ease-in-out;
 }
 
 .mem-list input{
@@ -54,24 +55,26 @@ h2 {
     
     border-top: .1em solid grey;
     color: #0a0c0c;
+    transition: color .3s ease-in-out;
 }
 .mem-list label img {
     scale: 0.5;
     width: 0;
     height: 0;
+    transition: all .3s ease-in-out;
 }
 .mem-list input:checked + label {
     color: #0a0c0c;
 }
 .mem-list input:checked + label img {
     scale: 1;
-    width: 30vh;
-    height: 30vh;
+    width: 30vw;
+    height: 30vw;
 }
 
 .mem-list label:active img {
     opacity: 0.5;
-    transition: opacity .5s ease-in-out;
+    transition: all .5s ease-in-out;
 }
 .mem-list label:active h2 {
     color: #26a8f4;
@@ -80,6 +83,7 @@ h2 {
 
 .mem-list input:checked + label .icon {
     transform: rotate(45deg);
+    transition: all .3s ease-in-out;
 }
 .mem-list label:active .icon {
     color: #26a8f4;
@@ -91,23 +95,27 @@ h2 {
         color: #0a0c0c;
         transition: color .3s ease-in-out;
     }
+    .icon {
+        opacity: 0;
+        
+    }
     .mem-list:hover .icon {
+        transform: rotate(0deg);
         opacity: 1;
+        transition: all .3s ease-in-out;
     }
     .mem-list label:hover .icon {
         transform: rotate(45deg);
+        transition: transform .3s ease-in-out;
     }
     .mem-list label:hover img {
-        width: 30vh;
-        height: 30vh;
+        width: 30vw;
+        height: 30vw;
         scale: 1;
         transition: scale .5s ease-in-out;
     }
     .mem-list label {
         color: #26a8f4;
-    }
-    .icon {
-        opacity: 1;
     }
 }
 
@@ -121,6 +129,12 @@ h2 {
 
     .page {
         width: 80%;
+    }
+
+    .mem-list input:checked + label img {
+        scale: 1;
+        width: 30vh;
+        height: 30vh;
     }
 }
 
